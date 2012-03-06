@@ -41,12 +41,12 @@ $(function(){
             id = key;
         }
         var item                = {};
-            item.sports         = ["Sport: ", $('#selectsport').html()];
-            item.teamname       = ["Name: ", $('#teamname').html()];
-            item.teamsize       = ["Team Size: ", $('#teamsize').html()];
-            item.availabletime  = ["Only evening games: ", $('#availabletime').html()];
-            item.nextdate       = ["Next available date: ", $('#nextdate').html()];
-            item.notes          = ["Notes: ", $('#notes').html()];
+            item.sports         = ["Sport: ", $('#selectsport').val()];
+            item.teamname       = ["Name: ", $('#teamname').val()];
+            item.teamsize       = ["Team Size: ", $('#teamsize').val()];
+            item.availabletime  = ["Only evening games: ", $('#availabletime').val()];
+            item.nextdate       = ["Next available date: ", $('#nextdate').val()];
+            item.notes          = ["Notes: ", $('#notes').val()];
         //Save data into Local Storage: Use Stringify to convert our object to a string
         localStorage.setItem(id, JSON.stringify(item));
         alert("Team saved!");
@@ -180,16 +180,16 @@ $(function(){
             border: 1px solid black
         });
         getTeamName.css({
-            border: 1px solid black
+            border: 1 solid black;
         });
 
         //Get error messages
         var messageAry = [];
         //Group validation
-        if (getSport.html() == "Choose sport..."){
+        if (getSport.val() == "Select your team's sport..."){
             var sportError = "Please choose a sport.";
             getSport.css({
-                border: 1px solid red
+                border: 1px solid red;
             });
             messageAry.push(sportError);
         }
@@ -202,7 +202,7 @@ $(function(){
             messageAry.push(teamNameError);
         }
         //Next Date validation
-        if (getNextDate).html() == ""){
+        if (getNextDate.html() == ""){
             var nextDateError = "Please enter a date."
             getNextDate.css({
                 border: 1px solid red
