@@ -143,12 +143,12 @@ $(function(){
         toggleControls("off");
         
         //Populate form with local storage.
-        $('#selectsport').html(item.sports[1]);
-        $('#teamname').html(item.teamname[1]);
-        $('#teamsize').html(item.teamsize[1]);
-        $('#availabletime').html(item.availabletime[1]);
-        $('#nextdate').html(item.nextdate[1]);
-        $('#notes').html(item.notes[1]);
+        $('#selectsport').val(item.sports[1]);
+        $('#teamname').val(item.teamname[1]);
+        $('#teamsize').val(item.teamsize[1]);
+        $('#availabletime').val(item.availabletime[1]);
+        $('#nextdate').val(item.nextdate[1]);
+        $('#notes').val(item.notes[1]);
         
         //Remove listener from Add Team submission.
         $('#submit').unbind();
