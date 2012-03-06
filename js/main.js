@@ -9,7 +9,6 @@
   I have no idea why it's still underlined red in my text editor.
 */
 
-
 $(function(){
     
     var tmform = $('#teamform');
@@ -202,7 +201,7 @@ $(function(){
         if (getSport.val() == ""){
             var sportError = "Please choose a sport.";
             getSport.css({
-                'border': '5px solid red'
+                'border': '1px solid red'
             });
             messageAry.push(sportError);
         }
