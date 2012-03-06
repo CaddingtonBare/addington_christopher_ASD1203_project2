@@ -9,26 +9,39 @@
   I have no idea why it's still underlined red in my text editor.
 */
 
-$(function(){    
+
+$(function(){
+    
+    var tmform = $('#teamform');
+    
+    tmform.validate({
+        invalidHandler: function(form, validator){},
+        submitHandler: function(){
+            var data = tmform.serializeArray();
+            parseTeamForm(data);
+            pushJson(data);
+            console.log(json);
+        }
+    });
 
     var toggleControls = function(n){
-        var displayNone = css({ display: none });
-        var displayInline = css({ display: inline });
-        var displayBlock = css({ display: block });
+        var displayNone = { 'display': 'none' };
+        var displayInline = { 'display': 'inline' };
+        var displayBlock = { 'display': 'block' };
         
         switch(n){
             case "on":
-                $('#teamForm').displayNone
-                $('#clearData').displayInline
-                $('#displayData').displayNone
-                $('#addNew').displayInline
+                $('#teamForm').css(displayNone)
+                $('#clearData').css(displayInline)
+                $('#displayData').css(displayNone)
+                $('#addNew').css(displayInline)
                 break;
             case "off":
-                $('#teamForm').displayBlock
-                $('#clearData').displayInline
-                $('#displayData').displayInline
-                $('#addNew').displayNone
-                $('#items').displayNone
+                $('#teamForm').css(displayBlock)
+                $('#clearData').css(displayInline)
+                $('#displayData').css(displayInline)
+                $('#addNew').css(displayNone)
+                $('#items').css(displayNone)
                 break;
             default:
                 return false;
@@ -64,7 +77,7 @@ $(function(){
             .appendTo('#items')
         ;
         $('#items').css({
-            display: block
+            'display': 'block'
         });
         for(i = 0, j = localStorage.length; i < j; i++){
             var key = localStorage.key(i);
@@ -101,7 +114,7 @@ $(function(){
     //JSON OBJECT to autofill default localStorage data.
     function autoFillData(){
         //Store JSON to localStorage
-        for (var n in json){
+        for (var n in JSON){
             var id = Math.floor(Math.random()*42000000);
             localStorage.setItem(id, JSON.stringify(json[n]));
         }
@@ -177,35 +190,35 @@ $(function(){
         //Reset error messages
         errMsg.html("");
         getSport.css({
-            border: 1px solid black
+            'border': '1px solid black'
         });
         getTeamName.css({
-            border: 1 solid black;
+            'border': '1px solid black'
         });
 
         //Get error messages
         var messageAry = [];
         //Group validation
-        if (getSport.val() == "Select your team's sport..."){
+        if (getSport.val() == ""){
             var sportError = "Please choose a sport.";
             getSport.css({
-                border: 1px solid red;
+                'border': '5px solid red'
             });
             messageAry.push(sportError);
         }
         //Team Name validation
-        if (getTeamName.html() == ""){
+        if (getTeamName.val() == ""){
             var teamNameError = "Please enter a team name."
             getTeamName.css({
-                border: 1px solid red
+                'border': '1px solid red'
             });
             messageAry.push(teamNameError);
         }
         //Next Date validation
-        if (getNextDate.html() == ""){
+        if (getNextDate.val() == ""){
             var nextDateError = "Please enter a date."
             getNextDate.css({
-                border: 1px solid red
+                'border': '1px solid red'
             });
             messageAry.push(nextDateError);
         }
