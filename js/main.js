@@ -172,6 +172,7 @@ $(function(){
     var clearLocal = function(){
         if(localStorage.length === 0){
             alert("There is no data to clear.");
+            window.location.reload();
         }else{
             localStorage.clear();
             alert("All teams have been deleted!");
