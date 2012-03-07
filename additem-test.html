@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- ASD Project 1 / Christopher Addington / Term: 0312, 27 February 2012 -->
+<!-- MIU Project 3 / Christopher Addington / Term: 1112, 07 December 2011 -->
 <html>
     <head>
         <meta charset="utf-8" />
@@ -11,7 +11,6 @@
         <title>My Pickup League - Create New Team</title>
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
 	<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jquery.mobile.datebox.min.css" />
-	<link rel="stylesheet" href="css/styles-right.css" />
         <script type="text/javascript" src="js/libs/modernizr.custom.min.js"></script>
     </head>
     <body>
@@ -19,9 +18,11 @@
         <div data-role="header" data-theme="a" data-position="fixed">
             <h1>Create New Team</h1>
         </div>
-	
+<!--
         <div data-role="content">
+
             <div data-role="fieldcontain">
+
                 <nav>
                     <a href="#" id= "displayData">Display Data</a>
                     <a href="#" id= "clearData">Clear Stored Data</a>
@@ -30,6 +31,7 @@
             </div>
 
         </div>
+-->
 	<div data-role="content">
 	    <a href="index-right.html">
 	        <img id="brandlogo" src="images/leaguelogo.png" />
@@ -39,7 +41,6 @@
             <form action="" method="post" id="teamform">
                 <div data-role="fieldcontain">
 		    <h6>* indicates required field</h6>
-		    <ul id="errors"></ul>
                     <label for="selectsport">*Sport:</label>
                     <select name="selectsport" id="selectsport" data-native-menu="false" class="required">
                         <option data-placeholder="true" value>Select your team's sport...</option>
@@ -95,7 +96,7 @@ Commented out until I decide if I want to replace the "Only available in the eve
                 <div data-role="fieldcontain">
 		    <div class="ui-grid-a">
 			<div class="ui-block-a">
-			    <input type="submit" id="submit" value="Create" data-icon="check" data-iconpos="left" data-iconshadow="true" data-shadow="true" data-theme="e" />
+			    <input type="submit" value="Create" data-icon="check" data-iconpos="left" data-iconshadow="true" data-shadow="true" data-theme="e" />
 			</div>
 			<div class="ui-block-b">
 			    <input type="reset" value="Reset" data-icon="refresh" data-iconpos="left" data-iconshadow="true" data-shadow="true" data-theme="a" />
@@ -142,7 +143,6 @@ Commented out until I decide if I want to replace the "Only available in the eve
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jquery.mobile.datebox.min.js"></script>
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i8n/jquery.mobile.datebox.i8n.en.js"></script>
         <script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
-	<script type="text/javascript" src="js/yaml.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="test.js"></script>
     </body>
 </html>
