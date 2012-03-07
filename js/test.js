@@ -7,16 +7,6 @@ $(function(){
     
     var tmform = $('#teamform');
     
-    tmform.validate({
-        invalidHandler: function(form, validator){},
-        submitHandler: function(){
-            var data = tmform.serializeArray();
-            parseTeamForm(data);
-            pushJson(data);
-            console.log(json);
-        }
-    });
-
     var toggleControls = function(n){
         var displayNone = { 'display': 'none' };
         var displayInline = { 'display': 'inline' };
