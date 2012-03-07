@@ -27,9 +27,9 @@
                     <a href="#" id= "clearData">Clear Stored Data</a>
                     <a href="additem.html" id="addNew" style="display:none;">Add New Item</a>
 		    <br /><br />
-		    <a href="#" id="addJSON">Retrieve JSON data</a>
-		    <a href="#" id="addXML">Retrieve XML data</a>
-		    <a href="#" id="addYAML">Retrieve YAML data</a>
+		    <a href="#JSONpage" id="addJSON">Retrieve JSON data</a>
+		    <a href="#XMLpage" id="addXML">Retrieve XML data</a>
+		    <a href="#YAMLpage" id="addYAML">Retrieve YAML data</a>
                 </nav>
             </div>
 
@@ -108,7 +108,23 @@ Commented out until I decide if I want to replace the "Only available in the eve
                 </div>
             </form>
         </div>
-    </div>             
+    </div>
+    <div data-role="page" id="JSONpage" data-add-back-btn="true" data-theme="a">
+        <div data-role="header" data-theme="a" data-position="fixed">
+            <h1>JSON AJAX call</h1>	
+        </div>
+    </div>
+    <div data-role="page" id="XMLpage" data-add-back-btn="true" data-theme="a">
+        <div data-role="header" data-theme="a" data-position="fixed">
+            <h1>XML AJAX call</h1>	
+        </div>
+    </div>
+    <div data-role="page" id="YAMLpage" data-add-back-btn="true" data-theme="a">
+        <div data-role="header" data-theme="a" data-position="fixed">
+            <h1>YAML AJAX call</h1>	
+        </div>
+    </div>
+
 <!--
         <section>
             <form>

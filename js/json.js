@@ -37,12 +37,12 @@ var json = {
         "notes":            ["Notes:", "Battle of the businesses summer league 3v3"]
     },
     "team5": {
-        "sports":           ["Sport:", "Football"],
-        "teamname":         ["Team Name:", "Winter Madmen"],
-        "teamsize":         ["Team Size:", "6"],
+        "sports":           ["Sport:", "Basketball"],
+        "teamname":         ["Team Name:", "Hoop da Whoop"],
+        "teamsize":         ["Team Size:", "4"],
         "availabletime":    ["Only evening games:", "Yes"],
         "nextdate":         ["Next available date:", "2011-11-05"],
-        "notes":            ["Notes:", "Tucson adult football winter 6v6"]
+        "notes":            ["Notes:", "I can tell from the pixels"]
     },
     "team6": {
         "sports":           ["Sport:", "Football"],

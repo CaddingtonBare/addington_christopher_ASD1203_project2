@@ -232,6 +232,22 @@ $(function(){
         }
     }
     
+    //Retrieve JSON data
+    var addJSON = function(){
+        $.ajax({
+            url: 'xhr/data.json',
+            type: 'GET',
+            dataType: 'json',
+            success: function(response){
+                
+            },
+            error: function(result){
+                alert(result);
+            }
+        });
+    }
+    
+    
     var errMsg = $('#errors');
     //Link/Submit Click events
     $('#displayData').on("click", getData);
