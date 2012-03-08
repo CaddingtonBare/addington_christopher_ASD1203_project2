@@ -27,7 +27,7 @@
                     <a href="#" id= "clearData" data-theme="e">Clear Stored Data</a>
                     <a href="additem.html" id="addNew" style="display:none;">Add New Item</a>
 		    <br /><br />
-		    <a href="#" id="addJSON">Retrieve JSON data</a>
+		    <a href="#JSONpage" id="addJSON">Retrieve JSON data</a>
 		    <a href="#" id="addXML">Retrieve XML data</a>
 		    <a href="#" id="addYAML">Retrieve YAML data</a>
 
@@ -109,7 +109,34 @@ Commented out until I decide if I want to replace the "Only available in the eve
                 </div>
             </form>
         </div>
-    </div>             
+    </div>
+    <div data-role="page" id="JSONpage" data-add-back-btn="true" data-theme="a">
+        <div data-role="header" data-theme="a" data-position="fixed">
+            <h1>JSON AJAX call</h1>	
+        </div>
+	<div data-role="collapsible" data-collapsed="true" data-theme="a">
+	    <div id="JSONcontent" data-role="content">
+	    </div>
+	</div>
+    </div>
+    <div data-role="page" id="XMLpage" data-add-back-btn="true" data-theme="a">
+        <div data-role="header" data-theme="a" data-position="fixed">
+            <h1>XML AJAX call</h1>	
+        </div>
+	<div data-role="collapsible" data-collapsed="true" data-theme="a">
+	    <div data-role="content" id="XMLcontent">
+	    </div>
+	</div>
+    </div>
+    <div data-role="page" id="YAMLpage" data-add-back-btn="true" data-theme="a">
+        <div data-role="header" data-theme="a" data-position="fixed">
+            <h1>YAML AJAX call</h1>	
+        </div>
+	<div data-role="collapsible" data-collapsed="true" data-theme="a">
+	    <div data-role="content" id="YAMLcontent">
+	    </div>
+	</div>
+    </div>
 <!--
         <section>
             <form>
@@ -148,7 +175,7 @@ Commented out until I decide if I want to replace the "Only available in the eve
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i8n/jquery.mobile.datebox.i8n.en.js"></script>
         <script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="js/yaml.js"></script>
-	<script type="text/javascript" src="xhr/data.json"></script>
+	<script type="text/javascript" src="xhr/data.js"></script>
         <script type="text/javascript" src="js/test.js"></script>
     </body>
 </html>
