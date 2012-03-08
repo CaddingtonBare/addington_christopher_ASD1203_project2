@@ -1,9 +1,7 @@
-// Name: Christopher Addington
-// Date: 27 February, 2012
-// Assignment: Project 1
-// ASD Term 0312
+<?xml version="1.0" encoding="UTF-8"?>
+<teams>
 
-var json = {
+
     "team1": {
         "sports":           ["Sport:", "Basketball"],
         "teamname":         ["Team Name:", "Dayton Ballers"],
