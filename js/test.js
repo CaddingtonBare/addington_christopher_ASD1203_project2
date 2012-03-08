@@ -5,18 +5,23 @@
 
 $(function(){
 
+$('#addJSON').on("click");
+
         $.ajax({
-            url: 'xhr/data.js',
-            type: 'GET',
-            dataType: 'json',
-            success: function(json){
-                for(var i=0, j=json.teams.length; i<j; i++){
-                    var whichTeam = json.teams[i];
+            url: "xhr/data.js",
+            type: "GET",
+            dataType: "json",
+            success: function(result){
+                alert(result);
+                
+                /*
+                for(var i=0, j=result.teams.length; i<j; i++){
+                    var whichTeam = result.teams[i];
                     $(
-                        '<div data-role="collapsible" data-collapsed="true" data-theme="a">'+
+                        '<div>'+
                             '<h3><img src="images/Basketball_landing.png" />Basketball</h3>'+
-                            '<div data-role="content">'+
-                                '<ul data-role="listview" data-theme="c">'+
+                            '<div>'+
+                                '<ul>'+
                                     '<li>' + whichTeam.sports[0] + ' ' + whichTeam.sports[1] + '</li>'+
                                     '<li>' + whichTeam.teamname[0] + ' ' + whichTeam.teamname[1] + '</li>'+
                                     '<li>' + whichTeam.teamsize[0] + ' ' + whichTeam.teamsize[1] + '</li>'+
@@ -26,11 +31,11 @@ $(function(){
                                 '</ul>'+
                             '</div>'+
                         '</div>'
-                    ).appendTo('#JSONpage');
+                    ).appendTo('#jsontent');
+                    
                 }
-            },
+                */
+            }
         });
-        
-console.log(json.teams[0].sports[1]);
-        
+                
 });
