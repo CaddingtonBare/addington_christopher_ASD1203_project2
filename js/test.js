@@ -77,15 +77,16 @@ $(function(){
             type: 'GET',
             dataType: 'text',
             success: function(csv){
+                alert("Yup, still works.");
                 var teams = [];
                 var pulledCSV = csv.split(/\r\n|\n/);
                 var labels = pulledCSV[0].split(',');
-                console.log(labels);
 
                 for(var i=2; i<pulledCSV.length; i++) {
-                    var team = testCSV[i].split(',');
-                    
+                    var team = pulledCSV[i].split(',');
                 }
+                
+                for(var j=0; j<)
             }
         })
     
