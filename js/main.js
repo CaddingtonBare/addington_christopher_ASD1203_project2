@@ -96,7 +96,7 @@ $(function(){
     //Function to get a unique image for each sport.
     function getImage(catName){
         $('#itemsUl li:last ul:last')
-            .append('<li><img src="images/" + catName + ".png"')
+            .append('<li><img src="images/"' + catName + '".png"')
         ;        
     }
     
