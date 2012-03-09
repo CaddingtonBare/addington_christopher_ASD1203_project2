@@ -71,13 +71,17 @@ $(function(){
     });
     
     $('#addCSV').on("click", function(){
-        ('#csvcontent').empty();
+        $('#csvcontent').empty();
         $.ajax({
             url: 'xhr/data.csv',
             type: 'GET',
-            dataType: 'xml',
+            dataType: 'text',
             success: function(csv){
                 alert("CSV data retrieved successfully!");
+                var testCSV = csv.split(/\r\n|\n/);
+                testCSV[0].split(',');
+                console.log(testCSV[0]);
+                console.log("Hi");
             }
         })
     
