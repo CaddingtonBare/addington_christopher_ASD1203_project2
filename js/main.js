@@ -75,7 +75,7 @@ $(function(){
             var value = localStorage.getItem(key);
             var obj = JSON.parse(value);
             $('#itemsUl')
-                .append('<li>' + obj.sports[1] + '</li>')
+                .append('<li><h3><img src="images/' + obj.sports[1] + '_10px.png" />' + obj.sports[1] + '</h3></li')
             ;
             $('#itemsUl li:last')
                 .append('<ul>' + obj.sports[1] + '</ul>')
@@ -84,7 +84,7 @@ $(function(){
                 var optSubText = obj[n][0] + " " + obj[n][1];
                 var subLi = $('#subLi');
                 $('#itemsUl li:last ul:last')
-                    .append('<li id=' + subLi + '>' + optSubText + '</li>')
+                    .append('<li id="' + subLi + '">' + optSubText + '</li>')
                     .append('<li id="linksLi"></li>')
                 ;
                 subLi
