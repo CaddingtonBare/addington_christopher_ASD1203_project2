@@ -5,18 +5,15 @@
 
 $(function(){
 
-$('#addJSON').on("click");
-
+$('#addJSON').on("click", function(){
         $.ajax({
             url: "xhr/data.js",
             type: "GET",
             dataType: "json",
-            success: function(result){
-                alert(result);
-                
-                /*
-                for(var i=0, j=result.teams.length; i<j; i++){
-                    var whichTeam = result.teams[i];
+            success: function(answer){
+                alert("JSON data retrieved successfully!");
+                for(var i=0, j=answer.teams.length; i<j; i++){
+                    var whichTeam = answer.teams[i];
                     $(
                         '<div>'+
                             '<h3><img src="images/Basketball_landing.png" />Basketball</h3>'+
@@ -31,11 +28,10 @@ $('#addJSON').on("click");
                                 '</ul>'+
                             '</div>'+
                         '</div>'
-                    ).appendTo('#jsontent');
-                    
+                    ).appendTo('#jsontent');   
                 }
-                */
             }
         });
                 
+});
 });

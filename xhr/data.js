@@ -1,12 +1,12 @@
-json = {
+{
     "teams":[
         {
         "sports":           ["Sport:", "Basketball"],
-        "teamname":         ["Team Name:", "Dayton Ballers"],
-        "teamsize":         ["Team Size:", "3"],
-        "availabletime":    ["Only evening games:", "No"],
-        "nextdate":         ["Next available date:", "2011-11-01"],
-        "notes":            ["Notes:", "Me Tom Joe 3v3 tourney"]
+        "teamname":         ["Team Name:", "Hoop da Whoos"],
+        "teamsize":         ["Team Size:", "4"],
+        "availabletime":    ["Only evening games:", "Yes"],
+        "nextdate":         ["Next available date:", "2011-11-05"],
+        "notes":            ["Notes:", "I can tell from the pixels"]
         },
         {
         "sports":           ["Sport:", "Basketball"],
@@ -34,10 +34,10 @@ json = {
         },
         {
         "sports":           ["Sport:", "Basketball"],
-        "teamname":         ["Team Name:", "Hoop da Whoop"],
-        "teamsize":         ["Team Size:", "4"],
-        "availabletime":    ["Only evening games:", "Yes"],
-        "nextdate":         ["Next available date:", "2011-11-05"],
-        "notes":            ["Notes:", "I can tell from the pixels"]
+        "teamname":         ["Team Name:", "Dayton Ballers"],
+        "teamsize":         ["Team Size:", "3"],
+        "availabletime":    ["Only evening games:", "No"],
+        "nextdate":         ["Next available date:", "2011-11-01"],
+        "notes":            ["Notes:", "Me Tom Joe 3v3 tourney"]
         }]
-};
+}
