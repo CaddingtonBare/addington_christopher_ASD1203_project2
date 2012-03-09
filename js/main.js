@@ -11,7 +11,6 @@ $(function(){
         invalidHandler: function(form, validator){},
         submitHandler: function(){
             var data = tmform.serializeArray();
-            parseTeamForm(data);
             pushJson(data);
             console.log(json);
         }
@@ -60,8 +59,7 @@ $(function(){
     var getData = function(){
         toggleControls("on");
         if(localStorage.length === 0){
-            autoFillData();
-            alert("There is no data in storage so default data was added.");
+            alert("There is no data in storage.  Please add a team.");
         }
         $('body')
             .append($('<div id="items"></div>'))
@@ -94,7 +92,8 @@ $(function(){
                 ;        
             }            
             makeItemLinks(key); //Create edit/delete links for each item.
-        }    
+        }
+    console.log(localStorage);
     }
     
     //Function to get a unique image for each sport.
@@ -103,16 +102,6 @@ $(function(){
             .append('<li><img src="images/" + catName + ".png"')
         ;        
     }
-    
-    //JSON OBJECT to autofill default localStorage data.
-    function autoFillData(){
-        //Store JSON to localStorage
-        for (var n in JSON){
-            var id = Math.floor(Math.random()*42000000);
-            localStorage.setItem(id, JSON.stringify(json[n]));
-        }
-    }
-    autoFillData();
     
     //makeItemLinks function
     //Incorporates edit/delete links for local storage on display.
