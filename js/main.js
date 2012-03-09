@@ -234,6 +234,7 @@ $(function(){
     
     //Create eventhandler for clicking "Retrieve JSON" & populate page with the pulled data
     $('#addJSON').on("click", function(){
+        $('#jsontent').empty();
         $.ajax({
             url: "xhr/data.js",
             type: "GET",
@@ -259,9 +260,12 @@ $(function(){
                     ).appendTo('#jsontent');   
                 }
             }
-        });
-                
+        });                    
     });
+    
+    //Create eventhandler for clicking "Retriever XML" & populate page with the pulled data
+    
+    
     
     
     var errMsg = $('#errors');
