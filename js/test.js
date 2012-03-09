@@ -108,7 +108,6 @@ $(function(){
                             '</div>'+
                         '</div>'
                     ).appendTo('#csvcontent');
-                console.log(teams);
                 }
             }
         })
