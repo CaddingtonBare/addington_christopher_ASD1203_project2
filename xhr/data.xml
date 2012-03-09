@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <teams>
     
-    <team1>
-        <sports>Sport: Football</sports>
+    <team>
+        <sports>Football</sports>
         <teamname>Team Name: Winter Madmen</teamname>
         <teamsize>Team Size: 6</teamsize>
         <availabletime>Only evening games: Yes</availabletime>
         <nextdate>Next available date: </nextdate>
         <notes>Notes: </notes>
-    </team1>
-    <team2>
-        <sports>Sport: Football</sports>
+    </team>
+    <team>
+        <sports>Football</sports>
         <teamname>Team Name: Real-life fantasy football</teamname>
         <teamsize>Team Size: 8</teamsize>
         <availabletime>Only evening games: No</availabletime>
         <nextdate>Next available date: 2011-11-06</nextdate>
         <notes>Notes: Summer flag football 7v7 with sub</notes>
-    </team2>
-    <team3>
-        <sports>Sport: Football</sports>
+    </team>
+    <team>
+        <sports>Football</sports>
         <teamname>Team Name: Seattle Seachickens</teamname>
         <teamsize>Team Size: 4</teamsize>
         <availabletime>Only evening games: No</availabletime>
         <nextdate>Next available date: 2011-11-07</nextdate>
         <notes>Notes: Mark's out next week, need replacement</notes>
-    </team3>
-    <team4>
-        <sports>Sport: Football</sports>
+    </team>
+    <team>
+        <sports>Football</sports>
         <teamname>Team Name: 50-yard heroes</teamname>
         <teamsize>Team Size: 2</teamsize>
         <availabletime>Only evening games: No</availabletime>
         <nextdate>Next available date: 2011-11-08</nextdate>
         <notes>Notes: Saturday morning kicker's practice</notes>
-    </team4>
-    <team5>
-        <sports>Sport: Football</sports>
+    </team>
+    <team>
+        <sports>Football</sports>
         <teamname>Team Name: Boston Bagels</teamname>
         <teamsize>Team Size: 8</teamsize>
         <availabletime>Only evening games: Yes</availabletime>
         <nextdate>Next available date: 2012-03-03</nextdate>
         <notes>Notes: West side Winter league</notes>
-    </team5>
+    </team>
 </teams>

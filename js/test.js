@@ -16,7 +16,7 @@ $('#addJSON').on("click", function(){
             for(var i=0, j=answer.teams.length; i<j; i++){
                 var whichTeam = answer.teams[i];
                 $(
-                    '<div>'+
+                    '<div id="team' + i + '">'+
                         '<h3><img src="images/Basketball_landing.png" />Basketball</h3>'+
                         '<div>'+
                             '<ul>'+
@@ -41,11 +41,31 @@ $('#addXML').on("click", function(){
         type: 'GET',
         dataType: 'xml',
         success: function(xml){
-            alert("XML data retrieved successfully!");
+            $(xml).find("team").each(function(){
+                var sport = $(this).find('sports').text();
+                var teamname = $(this).find('teamname').text();
+                var teamsize = $(this).find('teamsize').text();
+                var availabletime = $(this).find('availabletime').text();
+                var nextdate = $(this).find('nextdate').text();
+                var notes = $(this).find('notes').text();
+                $('' +
+                    '<div id="team">'+
+                        '<h3><img src="images/' + sport + '_landing.png" /></h3>'+
+                        '<div>'+
+                            '<ul>'+
+                                '<li>Sport: ' + sport + '</li>'+
+                                '<li>' + teamname + '</li>'+
+                                '<li>' + teamsize + '</li>'+
+                                '<li>' + availabletime + '</li>'+                
+                                '<li>' + nextdate + '</li>'+                
+                                '<li>' + notes + '</li>'+
+                            '</ul>'+
+                        '</div>'+
+                    '</div>'
+                ).appendTo('#xmlcontent');
+            })
         }
     })
-});
-        
-                
+});     
 });
 });
