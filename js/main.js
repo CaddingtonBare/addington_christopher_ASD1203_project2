@@ -265,6 +265,7 @@ $(function(){
     
     //Create eventhandler for clicking "Retriever XML" & populate page with the pulled data
     $('#addXML').on("click", function(){
+        $('#xmlcontent').empty();
         $.ajax({
         url: 'xhr/data.xml',
         type: 'GET',
@@ -279,7 +280,7 @@ $(function(){
                 var notes = $(this).find('notes').text();
                 $('' +
                     '<div id="team">'+
-                        '<h3><img src="images/' + sport + '_landing.png" /></h3>'+
+                        '<h3><img src="images/' + sport + '_10px.png" />' + sport + '</h3>'+
                         '<div>'+
                             '<ul>'+
                                 '<li>Sport: ' + sport + '</li>'+
@@ -296,8 +297,6 @@ $(function(){
         }
         })
     });     
-    
-    
     
     var errMsg = $('#errors');
     //Link/Submit Click events

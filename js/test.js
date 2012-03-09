@@ -36,6 +36,7 @@ $('#addJSON').on("click", function(){
 });
         
 $('#addXML').on("click", function(){
+        $('#xmlcontent').empty();
         $.ajax({
         url: 'xhr/data.xml',
         type: 'GET',
@@ -50,7 +51,7 @@ $('#addXML').on("click", function(){
                 var notes = $(this).find('notes').text();
                 $('' +
                     '<div id="team">'+
-                        '<h3><img src="images/' + sport + '_10px.png" /></h3>'+
+                        '<h3><img src="images/' + sport + '_10px.png" />' + sport + '</h3>'+
                         '<div>'+
                             '<ul>'+
                                 '<li>Sport: ' + sport + '</li>'+
