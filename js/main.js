@@ -81,19 +81,16 @@ $(function(){
                 .append('<ul>' + obj.sports[1] + '</ul>')
             getImage(obj.sports[i]);
             for (var n in obj){
-                var optSubText = obj[n][0] + " " + obj[n][1];
+                var optSubText = $('<li id="subLi">' + obj[n][0] + " " + obj[n][1] + '</li');
                 var subLi = $('#subLi');
                 $('#itemsUl li:last ul:last')
-                    .append('<li id="' + subLi + '">' + optSubText + '</li>')
+                    .append(optSubText)
                     .append('<li id="linksLi"></li>')
                 ;
-                subLi
-                    .html(optSubText)
-                ;        
             }            
             makeItemLinks(key); //Create edit/delete links for each item.
         }
-    console.log(obj.sports);
+    console.log(obj);
     }
     
     //Function to get a unique image for each sport.
