@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- ASD Project 1 / Christopher Addington / Term: 0312, 27 February 2012 -->
+<!-- ASD Project 2 / Christopher Addington / Term: 1203, 9 March, 2012 -->
 <html>
     <head>
         <meta charset="utf-8" />
@@ -19,7 +19,6 @@
         <div data-role="header" data-theme="a" data-position="fixed">
             <h1>Create New Team</h1>
         </div>
-	
         <div data-role="content">
             <div data-role="fieldcontain">
                 <nav id="buttonheader">
@@ -32,7 +31,6 @@
 		    <a href="#YAMLpage" id="addYAML">Retrieve YAML data</a>
                 </nav>
             </div>
-
         </div>
 	<div data-role="content">
 	    <a href="index-right.html">
@@ -75,27 +73,10 @@
                         <option value="off">No</option>
                     </select>
                 </div>
-
-<!--
-Commented out until I decide if I want to replace the "Only available in the evening?" slider.
-                <div data-role="fieldcontain">
-                    <fieldset data-role="controlgroup">
-                        <legend>Available to play:</legend>
-                        <input type="checkbox" value="Morning" name="morning" id="playtime1" />
-                        <label for="playtime1">Morning</label>
-                        <input type="checkbox" value="Afternoon" name="morning" id="playtime2" />
-                        <label for="playtime2">Afternoon</label>
-                        <input type="checkbox" value="Evening" name="morning" id="playtime3" />
-                        <label for="playtime3">Evening</label>
-                    </fieldset>   
-                </div>
--->
                 <div data-role="fieldcontain">
                     <label for="notes">Notes:</label>
                     <textarea id="notes" data-theme="c"></textarea>
                 </div>
-
-
                 <div data-role="fieldcontain">
 		    <div class="ui-grid-a">
 			<div class="ui-block-a">
@@ -113,9 +94,7 @@ Commented out until I decide if I want to replace the "Only available in the eve
         <div data-role="header" data-theme="a" data-position="fixed">
             <h1>JSON AJAX call</h1>	
         </div>
-	<div data-role="collapsible" data-collapsed="true" data-theme="a">
-	    <div data-role="content" id="JSONcontent">
-	    </div>
+	<div id="jsontent" data-role="collapsible" data-collapsed="true" data-theme="a">
 	</div>
     </div>
     <div data-role="page" id="XMLpage" data-add-back-btn="true" data-theme="a">
@@ -136,39 +115,6 @@ Commented out until I decide if I want to replace the "Only available in the eve
 	    </div>
 	</div>
     </div>
-
-<!--
-        <section>
-            <form>
-                <fieldset id="teamFieldset">
-                    <legend>Team Info</legend>
-                    <span>* fields are required.</span>
-                    <ul id="errors"></ul>
-                    <ul id="teaminfo">
-                        <li id="select"><label for="sports">*Select your sport:</label><br /></li>
-                        <li><label for="teamname">*Team Name:</label><br />
-                            <input type="text" id="teamname" required aria-required="true" />
-                        </li>
-                        <li><label for="teamsize">Team Size (1-11):</label><br />
-                            <input type="range" min="1" max="11" id="teamsize" />
-                        </li>
-                        <li>Only available in the evening?
--->
-                        <!-- Personal preference of mine to have the /li breaks at the end of the line only within sublists (illustrated two lines down), otherwise I close them out on level with li (illustrated two lines up) -->
-<!--                            <ul>
-                                <li><label for="playtime"><input type="checkbox" value="Yes" id="playtime" /></label></li>
-                            </ul>
-                        </li>
-                        <li><label for="nextdate">Next available date:</label>
-                            <input type="date" min="2011-10-27" max="2011-11-27" id="nextdate" name="nextdate" placeholder="YYYY-MM-DD" required aria-required="true" />
-                        </li>
-                        <li><label for="notes">Notes:</label><br /><textarea id="notes"></textarea>
-                        </li>
-                    </ul>
-                </fieldset>
-            </form>
-        </section>
--->                
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jquery.mobile.datebox.min.js"></script>
