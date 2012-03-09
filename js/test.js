@@ -35,8 +35,7 @@ $('#addJSON').on("click", function(){
     });
         
 $('#addXML').on("click", function(){
-    $('#xmlcontent').empty();
-    $.ajax({
+        $.ajax({
         url: 'xhr/data.xml',
         type: 'GET',
         dataType: 'xml',
