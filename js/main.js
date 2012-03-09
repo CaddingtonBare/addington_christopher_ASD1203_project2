@@ -264,7 +264,38 @@ $(function(){
     });
     
     //Create eventhandler for clicking "Retriever XML" & populate page with the pulled data
-    
+    $('#addXML').on("click", function(){
+        $.ajax({
+        url: 'xhr/data.xml',
+        type: 'GET',
+        dataType: 'xml',
+        success: function(xml){
+            $(xml).find("team").each(function(){
+                var sport = $(this).find('sports').text();
+                var teamname = $(this).find('teamname').text();
+                var teamsize = $(this).find('teamsize').text();
+                var availabletime = $(this).find('availabletime').text();
+                var nextdate = $(this).find('nextdate').text();
+                var notes = $(this).find('notes').text();
+                $('' +
+                    '<div id="team">'+
+                        '<h3><img src="images/' + sport + '_landing.png" /></h3>'+
+                        '<div>'+
+                            '<ul>'+
+                                '<li>Sport: ' + sport + '</li>'+
+                                '<li>' + teamname + '</li>'+
+                                '<li>' + teamsize + '</li>'+
+                                '<li>' + availabletime + '</li>'+                
+                                '<li>' + nextdate + '</li>'+                
+                                '<li>' + notes + '</li>'+
+                            '</ul>'+
+                        '</div>'+
+                    '</div>'
+                ).appendTo('#xmlcontent');
+            })
+        }
+        })
+    });     
     
     
     
