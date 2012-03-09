@@ -81,12 +81,23 @@ $(function(){
                 var teams = [];
                 var pulledCSV = csv.split(/\r\n|\n/);
                 var labels = pulledCSV[0].split(',');
-
                 for(var i=2; i<pulledCSV.length; i++) {
                     var team = pulledCSV[i].split(',');
+                    if (data.length == labels.length) {
+                        var teamData = [];
+                        for (var j=0; j<labels.length; j++){
+                            teamData.push(team[j]);
+                        }
+                        teams.push(teamData);
+                    }
                 }
-                
-                for(var j=0; j<)
+                for(var k=0; k<teams.length; k++){
+                    var teamCat = team[k];
+                    $('' +
+                    
+                    
+                    ).appendTo('#csvcontent');
+                }
             }
         })
     
