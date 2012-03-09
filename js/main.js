@@ -271,6 +271,7 @@ $(function(){
         type: 'GET',
         dataType: 'xml',
         success: function(xml){
+            alert("XML data retrieved successfully!");            
             $(xml).find("team").each(function(){
                 var sport = $(this).find('sports').text();
                 var teamname = $(this).find('teamname').text();
