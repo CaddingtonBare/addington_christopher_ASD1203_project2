@@ -11,8 +11,6 @@ $(function(){
         invalidHandler: function(form, validator){},
         submitHandler: function(){
             var data = tmform.serializeArray();
-            pushJson(data);
-            console.log(json);
         }
     });
 
@@ -60,8 +58,10 @@ $(function(){
         toggleControls("on");
         if(localStorage.length === 0){
             alert("There is no data in storage.  Please add a team.");
+            window.location.reload();
+            return false;
         }
-        $('body')
+        $('#displaycontent')
             .append($('<div id="items"></div>'))
         ;
         $('<ul id="itemsUl"></ul>')
@@ -75,16 +75,16 @@ $(function(){
             var value = localStorage.getItem(key);
             var obj = JSON.parse(value);
             $('#itemsUl')
-                .append('<li></li>')
+                .append('<li>' + obj.sports[1] + '</li>')
             ;
             $('#itemsUl li:last')
-                .append('<ul></ul>')
-            getImage(obj.sports[1]);
+                .append('<ul>' + obj.sports[1] + '</ul>')
+            getImage(obj.sports[i]);
             for (var n in obj){
                 var optSubText = obj[n][0] + " " + obj[n][1];
                 var subLi = $('#subLi');
                 $('#itemsUl li:last ul:last')
-                    .append('<li id="subLi"></li>')
+                    .append('<li id=' + subLi + '>' + optSubText + '</li>')
                     .append('<li id="linksLi"></li>')
                 ;
                 subLi
@@ -93,7 +93,7 @@ $(function(){
             }            
             makeItemLinks(key); //Create edit/delete links for each item.
         }
-    console.log(localStorage);
+    console.log(obj.sports);
     }
     
     //Function to get a unique image for each sport.
