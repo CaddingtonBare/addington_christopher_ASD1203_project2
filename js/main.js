@@ -231,7 +231,7 @@ $(function(){
                     var whichTeam = answer.teams[i];
                     $(
                         '<div>'+
-                            '<h3><img src="images/' + whichTeam.sports[1] + '10px.png" />Basketball</h3>'+
+                            '<h3><img src="images/' + whichTeam.sports[1] + '_10px.png" />Basketball</h3>'+
                             '<div>'+
                                 '<ul>'+
                                     '<li>' + whichTeam.sports[0] + ' ' + whichTeam.sports[1] + '</li>'+
